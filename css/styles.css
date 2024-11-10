@@ -1,0 +1,98 @@
+.header-container {
+  display: flex;
+  align-items:center;
+  justify-content: space-between;
+  background-color: white;
+  gap: 8px;
+  padding: 10px 700px 20px 50px;
+  
+}
+
+.logo {
+  width: 50px /* Adjust the width as needed */
+  height: auto;
+}
+
+
+.nav-links {
+  display: flex;
+  gap: 8px;
+  margin-right: 25x
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight:400;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif
+}
+
+.nav-links .about {
+  color:#00b39b
+} 
+
+.nav-links .career,
+.nav-links .department {
+  color:gray
+}
+
+.mid {
+  text-align: center;
+  padding: 0%;
+  margin-top: 30px;
+}
+
+.logos {
+  width: 45px;
+}
+
+.mid p {
+  font-size:30px;
+  color: #00b39b;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 300;
+  line-height: 1;
+  margin: 10px;
+  padding: 3px;
+}
+
+.content1 {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  padding: 10px;
+}
+
+.box1 {
+  flex: 1;
+  background-color: white;
+  padding: 20px;
+  border: 2px;
+  max-width: 28%;
+  margin: 10px 0;
+  font-size: 20px;
+  color:gray
+
+}
+
+.main-sect {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  padding: 10px;
+}
+
+
+  .button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+
+  .button:hover {
+    background-color: #0056b3;
+  }
