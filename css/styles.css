@@ -1,4 +1,4 @@
-.header-container {
+/* .header-container {
   display: flex;
   align-items:center;
   justify-content: space-between;
@@ -9,7 +9,7 @@
 }
 
 .logo {
-  width: 50px /* Adjust the width as needed */
+  width: 50px;
   height: auto;
 }
 
@@ -27,19 +27,118 @@
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif
 }
 
+.nav-links .career,
+.nav-links .department {
+  color:gray
+} */
+
+/* Basic Styling */
+header {
+  width: 100%;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  margin-bottom: 100px;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  max-width: 1200px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.logo img {
+  width: 250px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-weight: 500;
+  color: #333;
+}
+
 .nav-links .about {
   color:#00b39b
 } 
 
-.nav-links .career,
-.nav-links .department {
-  color:gray
+/* Specific Link Colors */
+.about {
+  color: green;
 }
+
+.career, .department {
+  color: gray;
+}
+
+/* Mobile Menu Styling */
+#menu-toggle {
+  display: none;
+}
+
+/* Style for the Hamburger Menu Icon */
+.menu-icon {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.menu-icon span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+}
+
+/* Responsive Styles for Small Screens */
+@media (max-width: 768px) {
+  .nav-links {
+      display: none; /* Hide links initially on small screens */
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      right: 20px;
+      background-color: white;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Show nav-links when the menu-toggle is checked */
+  #menu-toggle:checked + .menu-icon + .nav-links {
+      display: flex;
+  }
+
+  /* Display the menu icon on smaller screens */
+  .menu-icon {
+      display: flex;
+  }
+}
+
+/* Hide the menu icon on larger screens */
+@media (min-width: 769px) {
+  .menu-icon {
+      display: none;
+  }
+}
+
 
 .mid {
   text-align: center;
   padding: 0%;
-  margin-top: 30px;
+  margin-top: 100px;
 }
 
 .logos {
@@ -70,7 +169,7 @@
   border: 2px;
   max-width: 28%;
   margin: 10px 0;
-  font-size: 20px;
+  font-size: 18px;
   color:gray
 
 }
@@ -78,9 +177,109 @@
 .main-sect {
   background-color: white;
   display: flex;
-  justify-content: center;
+  justify-content: center, space-around;
   gap: 5px;
   padding: 10px;
+  font-size: 20px;
+  font-weight: 100;
+}
+
+.main-sect > div {
+  flex: 1;
+  max-width: 300px;
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.first {
+  background-color: #00b39b;
+}
+
+.second {
+  background-color: #007bff;
+}
+
+.third {
+  background-color: black;
+}
+
+.main-sect img {
+  width: 50px;
+  margin-bottom: 10px;
+}
+
+.main-sect select {
+  color: white;
+  background-color: inherit;
+  border: none;
+  width: 80%;
+  padding: 8px;
+  margin-top: 10px;
+  font-size: 1em
+}
+
+@media (max-width: 768px) {
+  .main-sect {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.global {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  gap: 100px;
+  padding: 20px;
+  font-size: 20px;
+  font-weight: 100;
+}
+
+.global .text {
+  flex: 1;
+  text-align: center;
+  font-size: 30px;
+  align-self: self-start;
+  color:#00b39b
+
+}
+
+@media (max-width: 768px) {
+  .global {
+      flex-direction: column;
+  }
+
+  .global .text, .global .logo {
+      flex: none;
+      width: 100%;
+  }
+
+  .global .logo {
+    grid-template-columns: repeat(2, 1fr);
+}
+}
+
+.global .logo {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 100px; /* Fixed width to restrict size */
+  height: auto; /* Adjust as needed */
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.global .logo .imgur {
+  width: 100px;
+  height: auto;
+  object-fit: cover;
+  margin-bottom: 20px;
+  justify-self: center;
+  align-self: center;
 }
 
 
